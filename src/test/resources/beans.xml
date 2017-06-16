@@ -1,8 +1,0 @@
-<beans>
-    <bean class="ii_basics.SimpleBeanWithNoDependency"/>
-    <bean class="ii_basics.SimpleBeanWithOneDependency">
-        <constructor>
-            <arg ref="simpleBeanWithNoDependency"/>
-        </constructor>
-    </bean>
-</beans>
