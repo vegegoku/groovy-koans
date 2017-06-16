@@ -1,0 +1,6 @@
+[[collective-datatypes]]
+
+== Collective Groovy datatypes
+<<<
+
+===

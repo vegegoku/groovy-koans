@@ -110,7 +110,15 @@ new File('data.txt').eachLine { line ->
 [source,java,i,indent=0]
 .in java
 ----
-include::../../src/main/java/i_introduction/LineCounter.java[lines=9..17]
+final int[] number = {0};
+        try {
+            Files.lines(Paths.get(filePath)).forEach(line -> {
+                number[0]++;
+                System.out.println(number[0] + ":" + line);
+            });
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 ----
 
 ==== PRINTING A LIST : COLLECTION LITERALS AND SIMPLIFIED PROPERTY ACCESS
@@ -169,7 +177,21 @@ for (customer in customers.corporate.customer) {
 [source,java,i,indent=0]
 .in java
 ----
-include::../../src/main/java/i_introduction/ReadingCustomersNames.java[lines=20..33]
+try {
+    DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+    DocumentBuilder documentBuilder = factory.newDocumentBuilder();
+    Document document = documentBuilder.parse(new File("customers.xml"));
+    NodeList customers = document.getElementsByTagName("customer");
+    for (int i = 0; i < customers.getLength(); i++) {
+        Node item = customers.item(i);
+        System.out.println(item.getAttributes().getNamedItem("name")
+                + " works for "
+                + (item.getAttributes().getNamedItem("company")));
+    }
+} catch (ParserConfigurationException | IOException | SAXException e) {
+    e.printStackTrace();
+}
+
 ----
 
 

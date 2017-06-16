@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-koans.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-koans.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-koans_main.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-koans_main.iml" group="groovy-koans" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-koans_test.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-koans_test.iml" group="groovy-koans" />
     </modules>
   </component>

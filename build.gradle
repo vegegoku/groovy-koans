@@ -1,7 +1,6 @@
 group 'com.progressoft'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
 apply plugin: 'java'
 apply plugin: 'groovy'
 repositories {
@@ -9,6 +8,7 @@ repositories {
 }
 
 dependencies {
+    compile group: 'org.apache.ivy', name: 'ivy', version: '2.4.0'
     compile 'org.codehaus.groovy:groovy-all:2.4.9'
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
