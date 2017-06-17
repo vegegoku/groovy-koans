@@ -5,7 +5,9 @@ import org.junit.Test
 class QuestionMark {
 
     // ------------ START EDITING HERE ----------------------
-    // add the numberAppraiser method here
+    def numberAppraiser(int n) {
+        n < 10 ? 'low' : 'high'
+    }
     // ------------ STOP EDITING HERE  ----------------------
 
     @Test
@@ -14,7 +16,7 @@ class QuestionMark {
         assert (false ? 1 : 2) == 2
 
         // ------------ START EDITING HERE ----------------------
-        def isGerman = false
+        def isGerman = true
         // ------------ STOP EDITING HERE  ----------------------
         assert (isGerman ? 'Rex Gildo' : 'Andre Hazes') == 'Rex Gildo', "We prefer a German singer for this test"
         assert numberAppraiser(3) == 'low', "Make a function that returns 'low' for numbers under 10 and 'high' for higher numbers."
@@ -24,7 +26,7 @@ class QuestionMark {
 
     def greatSinger(String suggestion = null) {
         // ------------ START EDITING HERE ----------------------
-
+        suggestion?:'Zanger Rinus'
         // ------------ STOP EDITING HERE  ----------------------
     }
 
@@ -33,7 +35,7 @@ class QuestionMark {
         assert 1 ?: 2 == 1
         assert 0 ?: 2 == 2
 
-        def name
+        def name='Rex Gildo'
 
         assert name ?: 'Frans Bauer' == 'Rex Gildo'
         assert greatSinger('Andre Hazes') == 'Andre Hazes', "Complete the greatSinger method, so it returns the suggestion, or defaults to 'Zanger Rinus'"
@@ -41,7 +43,9 @@ class QuestionMark {
     }
 
     // ------------ START EDITING HERE ----------------------
-    // add the lower method here
+    def lower(String s){
+        s?.toLowerCase()
+    }
     // ------------ STOP EDITING HERE  ----------------------
     @Test
     public void "nullsafe ? operator"() {

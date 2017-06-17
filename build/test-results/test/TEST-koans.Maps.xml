@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="koans.Maps" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-06-17T13:05:30" hostname="U343TPP50" time="0.011">
+  <properties/>
+  <testcase name="Getting/setting map values with bracket or dot notation" classname="koans.Maps" time="0.008"/>
+  <testcase name="Defining maps" classname="koans.Maps" time="0.001"/>
+  <testcase name="Getting/setting map values with get/put" classname="koans.Maps" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -12,6 +12,8 @@ class Closures {
         Closure times = { i1, i2 -> i1 * i2 }
         // ------------ START EDITING HERE ----------------------
 
+        Closure plusOne ={n1 -> 1+n1}
+        Closure plus = {x,y-> x+y}
         // ------------ STOP EDITING HERE  ----------------------
         assert plusOne(1) == 2
         assert plus(1, 2) == 3
@@ -22,7 +24,7 @@ class Closures {
     public void "Closures.call()"() {
 
         // ------------ START EDITING HERE ----------------------
-        def plusOne
+        def plusOne ={n -> n+1}
         // ------------ STOP EDITING HERE  ----------------------
         assert plusOne(1) == 2
         assert plusOne.call(5) == 6
@@ -33,7 +35,7 @@ class Closures {
     public void "Closure without arguments"() {
 
         // ------------ START EDITING HERE ----------------------
-        def noArg = { 'Closure without arguments.' }
+        def noArg = { 'Sieneke' }
         // ------------ STOP EDITING HERE  ----------------------
         assert noArg() == 'Sieneke'
 
@@ -44,7 +46,7 @@ class Closures {
         Closure hello = { println "Hello $it" }
         hello('Dries')
         // ------------ START EDITING HERE ----------------------
-        Closure plusOne = { 5 }
+        Closure plusOne = { it+1}
         // ------------ STOP EDITING HERE  ----------------------
         assert plusOne(1) == 2
         assert plusOne('Marco') == 'Marco1'
@@ -53,7 +55,7 @@ class Closures {
 
     def runThreeTimes(Closure closure) {
         // ------------ START EDITING HERE ----------------------
-
+        1.upto(3, closure)
         // ------------ STOP EDITING HERE  ----------------------
     }
 
@@ -65,7 +67,7 @@ class Closures {
 
     def times(int amount, Closure closure) {
         // ------------ START EDITING HERE ----------------------
-
+        1.upto(amount, closure)
         // ------------ STOP EDITING HERE  ----------------------
     }
 
@@ -79,7 +81,7 @@ class Closures {
     @Test
     public void "Bound parameters"() {
         // ------------ START EDITING HERE ----------------------
-
+        def threeTimes={c-> 1.upto(3, c)}
         // ------------ STOP EDITING HERE  ----------------------
         int runAmount = 0
         Closure run = { runAmount++ }
@@ -93,7 +95,7 @@ class Closures {
 
         def greet = { greeting, name -> "${greeting} ${name}" }
         // ------------ START EDITING HERE ----------------------
-
+        greet = { greeting='hello', name -> "${greeting} ${name}" }
         // ------------ STOP EDITING HERE  ----------------------
         assert greet('Roy') == 'hello Roy'
 

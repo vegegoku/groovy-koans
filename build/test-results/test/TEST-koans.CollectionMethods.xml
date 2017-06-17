@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="koans.CollectionMethods" tests="6" skipped="0" failures="0" errors="0" timestamp="2017-06-17T13:05:30" hostname="U343TPP50" time="0.009">
+  <properties/>
+  <testcase name="findAll" classname="koans.CollectionMethods" time="0.002"/>
+  <testcase name="Each" classname="koans.CollectionMethods" time="0.001"/>
+  <testcase name="find" classname="koans.CollectionMethods" time="0.001"/>
+  <testcase name="groupBy" classname="koans.CollectionMethods" time="0.004"/>
+  <testcase name="collect" classname="koans.CollectionMethods" time="0.001"/>
+  <testcase name="shorter collect notation" classname="koans.CollectionMethods" time="0.0"/>
+  <system-out><![CDATA[1
+2
+3
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -8,11 +8,11 @@ class Java {
         JavaPerson dries = new JavaPerson()
         dries.firstName = 'Dries' //We implicitly call the setter
         // ------------ START EDITING HERE ----------------------
-
+        dries.lastName='Roelvink'
         // ------------ STOP EDITING HERE  ----------------------
         JavaPerson andre = new JavaPerson(firstName: 'Andre')
         // ------------ START EDITING HERE ----------------------
-
+        andre=new JavaPerson(firstName: 'Andre', lastName: 'Hazes')
         // ------------ STOP EDITING HERE  ----------------------
         assert dries.lastName == 'Roelvink', "Set his last name in the same way as his first name"
         assert andre.lastName == 'Hazes', "Set his last name during construction"
@@ -25,7 +25,7 @@ class Java {
         def dries = new GroovyPerson()
         dries.setFirstName('Dries') //Groovy makes a setter for us
         // ------------ START EDITING HERE ----------------------
-
+        dries.setLastName('Roelvink')
         // ------------ STOP EDITING HERE  ----------------------
         assert dries.lastName == 'Roelvink'
 
@@ -40,18 +40,6 @@ class Java {
     }
 }
 
-public class GroovyPerson2 {
-    String firstName
-    String lastName
-
-    void setFirstName(String value) {
-        firstName = value.capitalize()
-    }
-
-    // ------------ START EDITING HERE ----------------------
-    // add fullName getter here
-    // ------------ STOP EDITING HERE  ----------------------
-}
 
 public class JavaPerson {
     private String firstName;
@@ -82,3 +70,18 @@ public class GroovyPerson {
 }
 
 
+public class GroovyPerson2 {
+    String firstName
+    String lastName
+
+    void setFirstName(String value) {
+        firstName = value.capitalize()
+    }
+
+    void setLastName(String value) {
+        lastName = value.capitalize()
+    }
+    String getFullName(){
+        firstName+' '+lastName
+    }
+}

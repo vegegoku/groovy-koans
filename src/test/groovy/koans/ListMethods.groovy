@@ -8,7 +8,7 @@ class ListMethods {
     void "flatten"() {
         def list = [1, 2, [2, 3]]
         // ------------ START EDITING HERE ----------------------
-        def result
+        def result = [1, 2, 2, 3]
         // ------------ STOP EDITING HERE  ----------------------
         assert list.flatten() == result
     }
@@ -17,7 +17,7 @@ class ListMethods {
     void "intersect"() {
         def integers = [1, 2, 3]
         // ------------ START EDITING HERE ----------------------
-        def result
+        def result = [3, 1]
         // ------------ STOP EDITING HERE  ----------------------
         assert integers.intersect([4, 3, 1]) == result
     }
@@ -27,7 +27,7 @@ class ListMethods {
         assert [1, 2, 3].disjoint([4, 5, 6])
 
         // ------------ START EDITING HERE ----------------------
-        def list
+        def list = [5, 6, 7]
         // ------------ STOP EDITING HERE  ----------------------
         assert list.disjoint([2, 3, 4])
     }
@@ -40,7 +40,7 @@ class ListMethods {
         assert list == [1, 2]
 
         // ------------ START EDITING HERE ----------------------
-
+        popped = list.pop()
         // ------------ STOP EDITING HERE  ----------------------
         assert popped == 2
         assert list == [1]
@@ -53,7 +53,7 @@ class ListMethods {
 
         def original = (0..100).toList()
         // ------------ START EDITING HERE ----------------------
-
+        def reversed = original.reverse()
         // ------------ STOP EDITING HERE  ----------------------
         assert reversed == original[-1..0]
     }
@@ -64,7 +64,7 @@ class ListMethods {
 
         def letters = ['x', 'b', 'm', 'w']
         // ------------ START EDITING HERE ----------------------
-        def sortedLetters
+        def sortedLetters = letters.sort()
         // ------------ STOP EDITING HERE  ----------------------
         assert sortedLetters[-1] == 'x'
     }
@@ -86,7 +86,7 @@ class ListMethods {
         ]
 
         // ------------ START EDITING HERE ----------------------
-        def sortedByAge
+        def sortedByAge = employees.sort({ e1, e2 -> e1.age <=> e2.age })
         // ------------ STOP EDITING HERE  ----------------------
         assert sortedByAge[-1].name == 'Gary'
     }
@@ -101,13 +101,17 @@ class ListMethods {
 
         def xlist = ['if', 'you', 'never', 'try', 'you', 'will', 'never', 'know']
         // ------------ START EDITING HERE ----------------------
-
+        xlist.remove(0)
+        xlist.remove(0)
+        xlist.remove(0)
+        xlist.remove(0)
+        xlist.remove(0)
         // ------------ STOP EDITING HERE  ----------------------
         assert xlist.size() == 3
         assert xlist.contains('know')
 
         // ------------ START EDITING HERE ----------------------
-
+        xlist.remove('know')
         // ------------ STOP EDITING HERE  ----------------------
         assert !xlist.contains('know')
         assert xlist.size() == 2
@@ -121,7 +125,7 @@ class ListMethods {
 
         def integers = [1, 2, 3]
         // ------------ START EDITING HERE ----------------------
-
+        integers.removeAll([1, 3])
         // ------------ STOP EDITING HERE  ----------------------
         assert integers == [2]
     }
@@ -132,7 +136,7 @@ class ListMethods {
         integers.collect { println "it = $it" }
 
         // ------------ START EDITING HERE ----------------------
-        def doubled
+        def doubled = integers.collect({ it * 2 })
         // ------------ STOP EDITING HERE  ----------------------
         assert doubled == [2, 4, 6]
     }
@@ -146,7 +150,9 @@ class ListMethods {
 
         def from0To10 = (0..10).toList()
         // ------------ START EDITING HERE ----------------------
-        def result
+        def result = from0To10.findAll({ item ->
+            item in [1, 2, 4, 8]
+        })
         // ------------ STOP EDITING HERE  ----------------------
         assert result == [1, 2, 4, 8]
     }
@@ -160,7 +166,7 @@ class ListMethods {
         def binaries = [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0
                         , 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1]
         // ------------ START EDITING HERE ----------------------
-        def result
+        def result = binaries.toSet().toList()
         // ------------ STOP EDITING HERE  ----------------------
         assert result == [0, 1]
 
@@ -178,7 +184,7 @@ class ListMethods {
                             'I lift my head, blinded by the sky']
 
         // ------------ START EDITING HERE ----------------------
-        def linesThatContainsMy
+        def linesThatContainsMy = shootingStar.find { "$it".contains('my') }
         // ------------ STOP EDITING HERE  ----------------------
         assert !linesThatContainsMy.contains('Its late and Im awake, staring at the wall')
     }
@@ -189,7 +195,7 @@ class ListMethods {
         assert list.first() == 1
 
         // ------------ START EDITING HERE ----------------------
-
+        list.remove(0)
         // ------------ STOP EDITING HERE  ----------------------
         assert list.first() == 2
     }
@@ -200,7 +206,7 @@ class ListMethods {
         assert list.head() == 1
 
         // ------------ START EDITING HERE ----------------------
-
+        list.remove(0)
         // ------------ STOP EDITING HERE  ----------------------
         assert list.head() == 2
     }
@@ -210,7 +216,7 @@ class ListMethods {
         def list = [1, 2, 3]
         assert list.tail() == [2, 3]
         // ------------ START EDITING HERE ----------------------
-        def result
+        def result = list.tail().tail()
         // ------------ STOP EDITING HERE  ----------------------
         assert list == [1, 2, 3]
         assert result == [3]
@@ -222,7 +228,7 @@ class ListMethods {
         assert list.last() == 3
 
         // ------------ START EDITING HERE ----------------------
-
+        list << 9
         // ------------ STOP EDITING HERE  ----------------------
         assert list.last() == 9
     }
@@ -232,7 +238,7 @@ class ListMethods {
         def list = [1, 2, 3]
         assert list.count(2) == 1
         // ------------ START EDITING HERE ----------------------
-        def result
+        def result = list.count(4)
         // ------------ STOP EDITING HERE  ----------------------
         assert !result
     }
@@ -245,7 +251,8 @@ class ListMethods {
 
         def letters = ['a', 'v', 'm', 'w']
         // ------------ START EDITING HERE ----------------------
-
+        def max = letters.max()
+        def min = letters.min()
         // ------------ STOP EDITING HERE  ----------------------
         assert max == 'w'
         assert min == 'a'
@@ -260,7 +267,9 @@ class ListMethods {
         assert even == 2
 
         // ------------ START EDITING HERE ----------------------
-        def odd
+        def odd = list.findAll({ item ->
+            item % 2 == 1
+        })
         // ------------ STOP EDITING HERE  ----------------------
         assert odd == [1, 3]
 
@@ -273,7 +282,7 @@ class ListMethods {
         assert list.every { item -> item < 5 }
 
         // ------------ START EDITING HERE ----------------------
-        def result
+        def result = list.every { i -> i > 5 }
         // ------------ STOP EDITING HERE  ----------------------
         assert result == false
     }
@@ -285,7 +294,7 @@ class ListMethods {
         assert list.any { item -> item < 2 }
 
         // ------------ START EDITING HERE ----------------------
-        def result
+        def result = list.any { i -> i > 3 }
         // ------------ STOP EDITING HERE  ----------------------
         assert result == false
     }
@@ -296,7 +305,7 @@ class ListMethods {
         def store = ''
         list.each { item ->
             // ------------ START EDITING HERE ----------------------
-
+            store+=item
             // ------------ STOP EDITING HERE  ----------------------
         }
         assert store == '123'
@@ -309,7 +318,7 @@ class ListMethods {
         def store = ''
         list.reverseEach { item ->
             // ------------ START EDITING HERE ----------------------
-
+            store+=item;
             // ------------ STOP EDITING HERE  ----------------------
         }
         assert store == '321'
@@ -321,7 +330,7 @@ class ListMethods {
         def store = ''
         list.eachWithIndex { item, index ->
             // ------------ START EDITING HERE ----------------------
-
+            store+=index+':'+item+' '
             // ------------ STOP EDITING HERE  ----------------------
         }
         assert store == '0:1 1:2 2:3 '
@@ -332,7 +341,7 @@ class ListMethods {
         def list = [1, 2, 3]
         assert list.join('-') == '1-2-3'
         // ------------ START EDITING HERE ----------------------
-        def csv
+        def csv=list.join(',')
         // ------------ STOP EDITING HERE  ----------------------
         assert csv == '1,2,3'
     }
@@ -343,9 +352,13 @@ class ListMethods {
         def result = list.inject(0) { clinks, guests ->
             clinks + guests
         }
-        assert result == 0 + 1 + 2 + 3 == list.sum()
+        assert result == 0 + 1 + 2 + 3
 
         // ------------ START EDITING HERE ----------------------
+        result=list.inject(1) { clinks, guests ->
+            clinks * guests
+        }
+        println(result)
 
         // ------------ STOP EDITING HERE  ----------------------
         assert result == 1 * 1 * 2 * 3
@@ -357,7 +370,7 @@ class ListMethods {
         def left = list.findAll { item -> item < pivot }
         def middle = list.findAll { item -> item == pivot }
         // ------------ START EDITING HERE ----------------------
-        def right
+        def right= list.findAll { item -> item > pivot }
         // ------------ STOP EDITING HERE  ----------------------
         return quickSort(left) + middle + quickSort(right)
     }

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="koans.Closures" tests="8" skipped="0" failures="0" errors="0" timestamp="2017-06-17T13:05:30" hostname="U343TPP50" time="0.018">
+  <properties/>
+  <testcase name="Bound parameters" classname="koans.Closures" time="0.002"/>
+  <testcase name="Closure as method parameter" classname="koans.Closures" time="0.002"/>
+  <testcase name="Closure as last method parameter" classname="koans.Closures" time="0.004"/>
+  <testcase name="Closures.call()" classname="koans.Closures" time="0.001"/>
+  <testcase name="Default parameters" classname="koans.Closures" time="0.002"/>
+  <testcase name="Closure without arguments" classname="koans.Closures" time="0.001"/>
+  <testcase name="it parameter in closures" classname="koans.Closures" time="0.002"/>
+  <testcase name="Closures " classname="koans.Closures" time="0.003"/>
+  <system-out><![CDATA[shalalalie
+shalalalie
+shalalalie
+shalalala
+shalalala
+shalalalie
+shalalalie
+shalalalie
+Hello Dries
+Hello Frans
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

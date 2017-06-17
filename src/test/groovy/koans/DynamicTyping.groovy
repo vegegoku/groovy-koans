@@ -9,7 +9,8 @@ class DynamicTyping {
         def variable1 = true
         variable1 = 'The answer to everything'
         // ------------ START EDITING HERE ----------------------
-
+        variable1=42
+        def variable2='enlightenment'
         // ------------ STOP EDITING HERE  ----------------------
         assert variable1 == 42, 'variable1 has no type, so it may be anything'
         assert variable2 == 'enlightenment', 'Define a new variable'
@@ -23,7 +24,8 @@ class DynamicTyping {
         variable1 = 'The answer to everything'
         println variable1.class.name
         // ------------ START EDITING HERE ----------------------
-
+        variable1=1
+        variable2='The answer to everything'
         // ------------ STOP EDITING HERE  ----------------------
         assert variable1.class.name == 'java.lang.Integer', 'Give variable1 the correct type'
         assert variable2 instanceof String, 'Give variable2 the correct type'
@@ -36,6 +38,7 @@ class DynamicTyping {
 
         try {
             // ------------ START EDITING HERE ----------------------
+            variable=true
             variable.length()  // Invalid method for Boolean type.
             // ------------ STOP EDITING HERE  ----------------------
             assert false, 'Change the type of the variable, so the previous statement will throw an exception'

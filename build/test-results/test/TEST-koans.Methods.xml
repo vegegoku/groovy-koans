@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="koans.Methods" tests="6" skipped="0" failures="0" errors="0" timestamp="2017-06-17T13:05:30" hostname="U343TPP50" time="0.08">
+  <properties/>
+  <testcase name="timesTwo" classname="koans.Methods" time="0.072"/>
+  <testcase name="No return" classname="koans.Methods" time="0.0"/>
+  <testcase name="methods without braces" classname="koans.Methods" time="0.002"/>
+  <testcase name="method parameters with default values" classname="koans.Methods" time="0.002"/>
+  <testcase name="methods with a variable parameter length" classname="koans.Methods" time="0.001"/>
+  <testcase name="Dynamic return type" classname="koans.Methods" time="0.0"/>
+  <system-out><![CDATA[Deze brief bind ik vast aan m'n vlieger
+Tot zij hem ontvangt, zij die ik mis
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

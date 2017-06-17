@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="koans.QuestionMark" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-06-17T13:05:30" hostname="U343TPP50" time="0.005">
+  <properties/>
+  <testcase name="? operator" classname="koans.QuestionMark" time="0.001"/>
+  <testcase name="nullsafe ? operator" classname="koans.QuestionMark" time="0.001"/>
+  <testcase name="Elvis operator" classname="koans.QuestionMark" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

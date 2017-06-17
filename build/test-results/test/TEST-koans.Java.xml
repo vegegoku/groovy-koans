@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="koans.Java" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-06-17T13:05:30" hostname="U343TPP50" time="0.009">
+  <properties/>
+  <testcase name="Groovy beans" classname="koans.Java" time="0.003"/>
+  <testcase name="Java beans" classname="koans.Java" time="0.003"/>
+  <testcase name="Groovy beans 2" classname="koans.Java" time="0.003"/>
+  <system-out><![CDATA[Setting last name to Roelvink
+Setting last name to Hazes
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -11,7 +11,7 @@ class Lists {
         List<String> singers = ['Frans Bauer', 'Zanger Rinus']
 
         // ------------ START EDITING HERE ----------------------
-        List numbers
+        List numbers=[1,2,3]
         // ------------ STOP EDITING HERE  ----------------------
         assert numbers.size() == 3, 'Define a list with three numbers'
 
@@ -24,7 +24,8 @@ class Lists {
 
         singers << 'Jantje Smit'
         // ------------ START EDITING HERE ----------------------
-
+        singers << 'Bo3'
+        singers << 'akab'
         // ------------ STOP EDITING HERE  ----------------------
         assert singers.size() == 5, 'Add two more great singers'
 
@@ -34,7 +35,7 @@ class Lists {
     public void "accessing list items by index"() {
 
         // ------------ START EDITING HERE ----------------------
-        def numbers
+        def numbers=[0,3,2,7,9]
         // ------------ STOP EDITING HERE  ----------------------
         assert numbers[1] == 3
         assert numbers[4] == 9
@@ -46,8 +47,8 @@ class Lists {
     public void "Adding lists"() {
 
         // ------------ START EDITING HERE ----------------------
-        def list1 = []
-        def list2 = []
+        def list1 = [1,2]
+        def list2 = [3,4]
         // ------------ STOP EDITING HERE  ----------------------
         assert list1 - list2 == [1, 2]
         assert list1 + list2 == [1, 2, 3, 4]
@@ -59,7 +60,7 @@ class Lists {
         assert [1] * 3 == [1, 1, 1]
         def list = [1, 2]
         // ------------ START EDITING HERE ----------------------
-
+        list*=2
         // ------------ STOP EDITING HERE  ----------------------
         assert list == [1, 2, 1, 2]
 
@@ -72,7 +73,7 @@ class Lists {
 
         def x = [5, 4]
         // ------------ START EDITING HERE ----------------------
-
+        x+=[3]
         // ------------ STOP EDITING HERE  ----------------------
         assert x == [5, 4, 3]
 
@@ -83,7 +84,7 @@ class Lists {
 
         def y = [1, 1, 1, 1, 1, 1, 2]
         // ------------ START EDITING HERE ----------------------
-
+        y-=[1,1,1,1,1,1]
         // ------------ STOP EDITING HERE  ----------------------
         assert y == [2]
 
@@ -96,7 +97,7 @@ class Lists {
         assert myList[0..2] == ['a', 'b', 'c']
 
         // ------------ START EDITING HERE ----------------------
-        def fromDtoF
+        def fromDtoF=myList[3..5]
         // ------------ STOP EDITING HERE  ----------------------
         assert fromDtoF == ['d', 'e', 'f']
 
@@ -107,7 +108,7 @@ class Lists {
         def myList = ['a', 'b', 'c', 'd', 'e', 'f']
         assert myList[0, 2, 4] == ['a', 'c', 'e']
         // ------------ START EDITING HERE ----------------------
-        def aAndf
+        def aAndf=myList[0,5]
         // ------------ STOP EDITING HERE  ----------------------
         assert aAndf == ['a', 'f']
     }
@@ -119,7 +120,7 @@ class Lists {
         myList[0..2] = ['x', 'y', 'z']
         assert myList == ['x', 'y', 'z', 'd', 'e', 'f']
         // ------------ START EDITING HERE ----------------------
-
+        myList[4..5]=['r','s']
         // ------------ STOP EDITING HERE  ----------------------
         assert myList == ['x', 'y', 'z', 'd', 'r', 's']
 
@@ -131,11 +132,11 @@ class Lists {
         def myList = ['a', 'b', 'c', 'd', 'e', 'f']
 
         myList[3..5] = []
-        assert myList == ['x', 'y', 'z']
+        assert myList == ['a', 'b', 'c']
 
         def oneInBinaries = [0, 0, 0, 1]
         // ------------ START EDITING HERE ----------------------
-
+        oneInBinaries[0..1]=[]
         // ------------ STOP EDITING HERE  ----------------------
         assert oneInBinaries == [0, 1]
     }
@@ -147,7 +148,7 @@ class Lists {
         assert myList == ['x', 0, 1, 2, 'z']
         def oneInBinaries = [0, 1]
         // ------------ START EDITING HERE ----------------------
-
+        oneInBinaries[0..0]=[0,0,0]
         // ------------ STOP EDITING HERE  ----------------------
         assert oneInBinaries == [0, 0, 0, 1]
     }
@@ -158,7 +159,7 @@ class Lists {
         assert list[-1] == 4
 
         // ------------ START EDITING HERE ----------------------
-        def sub
+        def sub =[list[-3], list[-4], list[-1]]
         // ------------ STOP EDITING HERE  ----------------------
         assert sub == [2, 1, 4]
     }
@@ -170,7 +171,8 @@ class Lists {
         assert myList == ['a']
 
         // ------------ START EDITING HERE ----------------------
-
+        myList << 'c'
+        myList << 's'
         // ------------ STOP EDITING HERE  ----------------------
         assert myList == ['a', 'c', 's']
     }
@@ -182,7 +184,7 @@ class Lists {
         assert 'b' in myList
 
         // ------------ START EDITING HERE ----------------------
-        def falseStatementUsingInWithList
+        def falseStatementUsingInWithList= 'x' in myList
         // ------------ STOP EDITING HERE  ----------------------
         assert falseStatementUsingInWithList == false
     }
@@ -200,6 +202,7 @@ class Lists {
 
         switch (candidate) {
         // ------------ START EDITING HERE ----------------------
+            case myList: result='Whoop'
 
         // ------------ STOP EDITING HERE  ----------------------
             default: break
@@ -219,7 +222,7 @@ class Lists {
         def expr = ''
 
         // ------------ START EDITING HERE ----------------------
-        def list
+        def list=[1,'*',5,'*',2]
         // ------------ STOP EDITING HERE  ----------------------
 
         for (i in list) {

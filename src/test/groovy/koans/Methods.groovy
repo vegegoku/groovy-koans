@@ -6,7 +6,7 @@ class Methods {
 
     int plus(int i1, int i2) {
         // ------------ START EDITING HERE ----------------------
-        i1 - i2
+        i1 + i2
         // ------------ STOP EDITING HERE  ----------------------
     }
 
@@ -19,7 +19,10 @@ class Methods {
 
     def fuzzyPlus(int i1, int i2) {
         // ------------ START EDITING HERE ----------------------
-        i1 + i2
+        if(i1>99)
+            'too much'
+        else
+            i1 + i2
         // ------------ STOP EDITING HERE  ----------------------
     }
 
@@ -30,7 +33,9 @@ class Methods {
     }
 
     // ------------ START EDITING HERE ----------------------
-    //add the timesTwo method here
+    def timesTwo(def x){
+        x*2
+    }
     // ------------ STOP EDITING HERE  ----------------------
 
     @Test
@@ -52,7 +57,9 @@ class Methods {
     }
 
     // ------------ START EDITING HERE ----------------------
-    //add the greet method here
+    def greet(name='stranger'){
+        'hello '+name
+    }
     // ------------ STOP EDITING HERE  ----------------------
 
     @Test
@@ -67,7 +74,7 @@ class Methods {
 
     def add(int ... values) {
         // ------------ START EDITING HERE ----------------------
-
+        values.sum()
         // ------------ STOP EDITING HERE  ----------------------
     }
 

@@ -13,7 +13,7 @@ class Ranges {
 
         def sumOfNumbersFrom0To100 = 0
         // ------------ START EDITING HERE ----------------------
-
+        sumOfNumbersFrom0To100 = from1to100.sum()
         // ------------ STOP EDITING HERE  ----------------------
         assert sumOfNumbersFrom0To100 == 5050
     }
@@ -43,7 +43,7 @@ class Ranges {
 
         assert (0..10).contains(5)
         // ------------ START EDITING HERE ----------------------
-        def x
+        def x = 0..10
         // ------------ STOP EDITING HERE  ----------------------
         assert x.contains(10)
 
@@ -51,7 +51,7 @@ class Ranges {
         assert (0..<10).contains(9)
 
         // ------------ START EDITING HERE ----------------------
-        def y
+        def y = 0..10
         // ------------ STOP EDITING HERE  ----------------------
         assert y.contains(10)
 
@@ -59,7 +59,7 @@ class Ranges {
         def z = new IntRange(0, 10)
         assert z.contains(5)
         // ------------ START EDITING HERE ----------------------
-        def a
+        def a = 10..0
         // ------------ STOP EDITING HERE  ----------------------
         assert a == (10..0)
 
@@ -68,7 +68,7 @@ class Ranges {
         assert (0.0..1.0).containsWithinBounds(0.5)
 
         // ------------ START EDITING HERE ----------------------
-        def fractionsFrom0to10 = (0..10)
+        def fractionsFrom0to10 = (0.0..10.0)
         // ------------ STOP EDITING HERE  ----------------------
         assert fractionsFrom0to10.containsWithinBounds(3.3)
 
@@ -76,7 +76,7 @@ class Ranges {
         assert ('a'..'c').contains('b')
 
         // ------------ START EDITING HERE ----------------------
-        def languageOfthreeLetters
+        def languageOfthreeLetters = 'x'..'xxx'
         // ------------ STOP EDITING HERE  ----------------------
         languageOfthreeLetters.contains('xxx')
 
@@ -86,7 +86,8 @@ class Ranges {
         assert (today..yesterday).size() == 2
 
         // ------------ START EDITING HERE ----------------------
-        def next30days
+        def later30days = today + 3
+        def next30days = today..later30days
         // ------------ STOP EDITING HERE  ----------------------
         assert next30days.contains(today)
 
@@ -102,14 +103,17 @@ class Ranges {
 
         def lettersFromMtoZ
         // ------------ START EDITING HERE ----------------------
-
+        lettersFromMtoZ = ''
+        ('m'..'z').each { element ->
+            lettersFromMtoZ += element
+        }
         // ------------ STOP EDITING HERE  ----------------------
         assert lettersFromMtoZ == 'mnopqrstuvwxyz'
 
         // Ranges for classification
 
         // ------------ START EDITING HERE ----------------------
-        def b
+        def b = 1..5
         // ------------ STOP EDITING HERE  ----------------------
         assert 5 in b, "specify a range that contain 5"
         assert b.isCase(5)
@@ -120,7 +124,7 @@ class Ranges {
         switch (age) {
             case 16..20: insuranceRate = 0.05; break
         // ------------ START EDITING HERE ----------------------
-
+            case 21..50: insuranceRate = 0.06; break
         // ------------ STOP EDITING HERE  ----------------------
             case 51..65: insuranceRate = 0.07; break
             default: throw new IllegalArgumentException()
@@ -136,7 +140,7 @@ class Ranges {
         def worklog = ''
         for (day in mon..fri) {
             // ------------ START EDITING HERE ----------------------
-
+            worklog=worklog+day+' '
             // ------------ STOP EDITING HERE  ----------------------
         }
         assert worklog == 'Mon Tue Wed Thu Fri '

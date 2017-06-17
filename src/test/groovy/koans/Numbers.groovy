@@ -8,7 +8,7 @@ class Numbers {
     void "repetition"() {
         def store = ''
         // ------------ START EDITING HERE ----------------------
-        def i
+        def i=3
         // ------------ STOP EDITING HERE  ----------------------
         i.times {
             store += 'x'
@@ -34,7 +34,7 @@ class Numbers {
     void "downTo"() {
         def store = ''
         // ------------ START EDITING HERE ----------------------
-        def i
+        def i=-2
         // ------------ STOP EDITING HERE  ----------------------
         2.downto(i) { number ->
             store += number + ' '
@@ -46,7 +46,7 @@ class Numbers {
     void "step"() {
         def store = ''
         // ------------ START EDITING HERE ----------------------
-        def stepLength
+        def stepLength=0.1
         // ------------ STOP EDITING HERE  ----------------------
         0.step(0.5, stepLength) { number ->
             store += number + ' '

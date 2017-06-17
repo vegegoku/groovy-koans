@@ -19,7 +19,7 @@ class CollectionMethods {
         List singers = ['Frans', 'Andre', 'De Havenzangers']
 
         // ------------ START EDITING HERE ----------------------
-        List stringLengths
+        List stringLengths=singers.collect {"$it".length()}
         // ------------ STOP EDITING HERE  ----------------------
 
         assert stringLengths == [5, 5, 15]
@@ -31,9 +31,9 @@ class CollectionMethods {
         List singers = ['Frans', 'Andre', 'De Havenzangers']
         List stringLengths = singers*.length()
 
-        assert stringLengths == 'What is this?'
+        assert stringLengths == [5, 5, 15]
         // ------------ START EDITING HERE ----------------------
-        def lowercase
+        def lowercase= singers*.toLowerCase()
         // ------------ STOP EDITING HERE  ----------------------
         assert lowercase == ['frans', 'andre', 'de havenzangers'], 'Use the * notation to transform the list to lowercase'
 
@@ -44,7 +44,7 @@ class CollectionMethods {
         List singers = ['Frans', 'Andre', 'De Havenzangers', 'Rex Gildo', 'Zanger Rinus']
 
         // ------------ START EDITING HERE ----------------------
-        def singersWithAFiveLetterName
+        def singersWithAFiveLetterName=singers.findAll {"$it".length()==5}
         // ------------ STOP EDITING HERE  ----------------------
 
         assert singersWithAFiveLetterName.size() == 2
@@ -56,7 +56,7 @@ class CollectionMethods {
         List singers = ['Rex Gildo', 'Frans', 'Andre', 'De Havenzangers']
 
         // ------------ START EDITING HERE ----------------------
-        def firstSingerWithAFiveLetterName = singers.find { false }
+        def firstSingerWithAFiveLetterName = singers.find { "$it".length()==5 }
         // ------------ STOP EDITING HERE  ----------------------
         assert firstSingerWithAFiveLetterName == 'Frans'
 
@@ -72,7 +72,7 @@ class CollectionMethods {
                 new Singer(name: 'Rex Gildo', country: 'DE'),
         ]
         // ------------ START EDITING HERE ----------------------
-
+        def singersByCountry=singers.groupBy {it.country}
         // ------------ STOP EDITING HERE  ----------------------
         assert singersByCountry['BE'].size() == 2
 

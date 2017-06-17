@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="koans.ListMethods" tests="28" skipped="0" failures="0" errors="0" timestamp="2017-06-17T13:05:30" hostname="U343TPP50" time="0.071">
+  <properties/>
+  <testcase name="eachWithIndex" classname="koans.ListMethods" time="0.002"/>
+  <testcase name="Treating a list like a stack" classname="koans.ListMethods" time="0.001"/>
+  <testcase name="inject" classname="koans.ListMethods" time="0.004"/>
+  <testcase name="findAll" classname="koans.ListMethods" time="0.004"/>
+  <testcase name="unique" classname="koans.ListMethods" time="0.001"/>
+  <testcase name="flatten" classname="koans.ListMethods" time="0.001"/>
+  <testcase name="reveseEach" classname="koans.ListMethods" time="0.002"/>
+  <testcase name="list example" classname="koans.ListMethods" time="0.012"/>
+  <testcase name="any" classname="koans.ListMethods" time="0.002"/>
+  <testcase name="each" classname="koans.ListMethods" time="0.0"/>
+  <testcase name="find" classname="koans.ListMethods" time="0.001"/>
+  <testcase name="grep" classname="koans.ListMethods" time="0.01"/>
+  <testcase name="head" classname="koans.ListMethods" time="0.001"/>
+  <testcase name="join" classname="koans.ListMethods" time="0.0"/>
+  <testcase name="last" classname="koans.ListMethods" time="0.001"/>
+  <testcase name="sort" classname="koans.ListMethods" time="0.0"/>
+  <testcase name="tail" classname="koans.ListMethods" time="0.0"/>
+  <testcase name="count" classname="koans.ListMethods" time="0.001"/>
+  <testcase name="every" classname="koans.ListMethods" time="0.002"/>
+  <testcase name="first" classname="koans.ListMethods" time="0.001"/>
+  <testcase name="disjoint" classname="koans.ListMethods" time="0.001"/>
+  <testcase name="intersect" classname="koans.ListMethods" time="0.001"/>
+  <testcase name="sort using custom comparators" classname="koans.ListMethods" time="0.007"/>
+  <testcase name="max/min" classname="koans.ListMethods" time="0.001"/>
+  <testcase name="collect" classname="koans.ListMethods" time="0.003"/>
+  <testcase name="reverse" classname="koans.ListMethods" time="0.0"/>
+  <testcase name="removeAll" classname="koans.ListMethods" time="0.001"/>
+  <testcase name="remove by index/value" classname="koans.ListMethods" time="0.001"/>
+  <system-out><![CDATA[6
+it = 1
+it = 2
+it = 3
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

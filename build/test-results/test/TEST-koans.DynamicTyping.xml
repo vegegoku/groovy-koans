@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="koans.DynamicTyping" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-06-17T13:05:30" hostname="U343TPP50" time="0.008">
+  <properties/>
+  <testcase name="Runtime typing" classname="koans.DynamicTyping" time="0.007"/>
+  <testcase name="def" classname="koans.DynamicTyping" time="0.0"/>
+  <testcase name="Calling a method on a dynamic variable" classname="koans.DynamicTyping" time="0.001"/>
+  <system-out><![CDATA[java.lang.Boolean
+java.lang.String
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

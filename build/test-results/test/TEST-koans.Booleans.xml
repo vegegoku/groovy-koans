@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="koans.Booleans" tests="5" skipped="0" failures="0" errors="0" timestamp="2017-06-17T13:05:30" hostname="U343TPP50" time="0.013">
+  <properties/>
+  <testcase name="String truth" classname="koans.Booleans" time="0.0"/>
+  <testcase name="Numerical truth" classname="koans.Booleans" time="0.0"/>
+  <testcase name="Comparing booleans" classname="koans.Booleans" time="0.0"/>
+  <testcase name="truth" classname="koans.Booleans" time="0.013"/>
+  <testcase name="Collections as booleans" classname="koans.Booleans" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
