@@ -40,6 +40,18 @@ class Java {
     }
 }
 
+public class GroovyPerson2 {
+    String firstName
+    String lastName
+
+    void setFirstName(String value) {
+        firstName = value.capitalize()
+    }
+
+    // ------------ START EDITING HERE ----------------------
+    // add fullName getter here
+    // ------------ STOP EDITING HERE  ----------------------
+}
 
 public class JavaPerson {
     private String firstName;
@@ -70,11 +82,3 @@ public class GroovyPerson {
 }
 
 
-public class GroovyPerson2 {
-    String firstName
-    String lastName
-
-    void setFirstName(String value) {
-        firstName = value.capitalize()
-    }
-}
