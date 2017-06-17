@@ -1,0 +1,41 @@
+= Groovy Koans
+
+
+
+This project Is a hands on Groovy Language Features and Basics +
+
+It has a documentation and A Failed unit tests that you need to fill the missing parts And make them pass
+
+.failed unit test
+====
+[source,groovy]
+----
+@Test
+    public void "Comparing booleans"() {
+        boolean predicate = true
+        // ------------ START EDITING HERE ----------------------
+
+        // ------------ STOP EDITING HERE  ----------------------
+        assert predicate == false
+    }
+
+
+----
+====
+.Completed unit test
+====
+[source,groovy]
+----
+@Test
+    public void "Comparing booleans"() {
+        boolean predicate = true
+        // ------------ START EDITING HERE ----------------------
+        predicate=true
+        // ------------ STOP EDITING HERE  ----------------------
+        assert predicate == false
+    }
+----
+====
+
+
+
