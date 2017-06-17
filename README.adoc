@@ -30,7 +30,9 @@ It has a documentation and A Failed unit tests that you need to fill the missing
     public void "Comparing booleans"() {
         boolean predicate = true
         // ------------ START EDITING HERE ----------------------
-        predicate=true
+        boolean left = true;
+        boolean right = false;
+        predicate = left == right;
         // ------------ STOP EDITING HERE  ----------------------
         assert predicate == false
     }
